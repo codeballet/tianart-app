@@ -1,0 +1,23 @@
+language: generic
+sudo: required
+services:
+  - docker
+
+# Build the development file for testing
+before install:
+  - docker build -t codeballet/tianart-app-test -f ./tianart-frontend/Dockerfile.dev ./tianart-frontend
+
+# Run tests
+script:
+  - docker run -e CI=true codeballet/tianart-app-test npm test
+
+after_success:
+  # Build images with production Dockerfile
+  - docker build -t codeballet/tianart-frontend ./tianart-frontend
+  - docker build -t codeballet/tianart-nginx ./nginx
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Push above images to docker hub
+  - docker push codeballet/tianart-frontend
+  - docker push codeballet/tianart-nginx
+  
