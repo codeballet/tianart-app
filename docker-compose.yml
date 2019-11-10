@@ -1,0 +1,11 @@
+version: '3'
+services:
+  tianart-frontend:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./tianart-frontend
+    volumes:
+      - /app/node_modules
+      - ./tianart-frontend:/app
+    ports:
+      - 3000:3000

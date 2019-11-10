@@ -4,3 +4,16 @@
   background-color: black;
   height: 100vh;
 }
+
+.massive.header {
+  position: absolute;
+  top: 2rem;
+  width: 100%;
+  height: auto;
+  font-size: 4rem !important;
+}
+
+.small.header {
+  text-align: justify !important;
+  text-align-last: left !important;
+}
