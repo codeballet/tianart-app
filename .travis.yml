@@ -16,7 +16,7 @@ after_success:
   - docker build -t codeballet/tianart-frontend ./tianart-frontend
   - docker build -t codeballet/tianart-nginx ./nginx
   # Log in to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push above images to docker hub
   - docker push codeballet/tianart-frontend
   - docker push codeballet/tianart-nginx
