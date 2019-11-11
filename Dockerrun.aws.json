@@ -1,0 +1,25 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "tianart-frontend",
+      "image": "codeballet/tianart-frontend",
+      "hostname": "tianart-frontend",
+      "essential": false,
+      "memory": 128
+    },
+    {
+      "name": "nginx",
+      "image": "codeballet/tianart-nginx",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": ["tianart-frontend"],
+      "memory": 128
+    }
+  ]
+}
