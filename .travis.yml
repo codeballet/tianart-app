@@ -20,3 +20,17 @@ after_success:
   # Push above images to docker hub
   - docker push codeballet/tianart-frontend
   - docker push codeballet/tianart-nginx
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-1"
+  app: "tianart-app"
+  env: "TianartApp-env"
+  bucket_name: "elasticbeanstalk-ap-northeast-1-442971121200"
+  bucket_path: "tianart-app"
+  on:
+    branch: master
+  access_key_id:
+    secure: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_ACCESS_KEY
