@@ -5,7 +5,7 @@ import faker from 'faker';
 class App extends React.Component {
   render() {
     return (
-      <Intro image={faker.image.fashion()} />
+      <Intro image="/flora-portrait.jpg" />
     );
   }
 }

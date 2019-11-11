@@ -7,10 +7,10 @@
 
 .massive.header {
   position: absolute;
-  top: 2rem;
+  bottom: 5rem;
   width: 100%;
   height: auto;
-  font-size: 4rem !important;
+  font-size: 5rem !important;
 }
 
 .small.header {

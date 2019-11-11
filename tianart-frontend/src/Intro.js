@@ -5,7 +5,7 @@ const Intro = (props) => {
   return (
     <div className="intro">
       <div className="ui inverted top attached segment">
-        <img className="ui fluid rounded image" 
+        <img className="ui rounded centered image" 
              alt="Tian Art fashion" 
              src={props.image} />
         <h1 className="ui centered teal massive header">
