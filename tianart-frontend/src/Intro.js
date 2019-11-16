@@ -8,7 +8,7 @@ const Intro = (props) => {
             alt="Tian Art fashion" 
             src={props.image} />
       <h1 className="ui massive centered teal header">
-        Tian Art
+        TIAN ART
       </h1>
       <h2 className="ui centered teal header">
         The Artful Convergence of History and Fantasy
