@@ -1,9 +1,9 @@
 .massive.header {
   position: absolute;
-  top: 29rem;
+  top: 1rem;
   width: 100%;
   height: auto;
-  font-size: 4rem !important;
+  font-size: 3rem !important;
 }
 
 .small.header {
